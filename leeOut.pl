@@ -21,14 +21,17 @@
 
 use strict;
 use warnings;
-my %val = &leeOut(@ARGV);
+my %val = &procOut(@ARGV);
 print &ji_c(%val) . "\n";
 
-#
-#foreach my $llave ( sort { $a cmp $b } keys %val ) {
-#    print $llave . " = " . $val{$llave} . "\n";
-#}
-
+#===  FUNCTION  ================================================================
+#         NAME: procOut
+#      PURPOSE: Aplicar Ji cuadrado
+#   PARAMETERS: Lista de valores
+#      RETURNS: Flotante resultado de la evaluación de la función
+#     COMMENTS: Para una futura versión fuese bueno que se leyeran los datos
+#     			experimentales desde un archivo de configuración
+#===============================================================================
 sub ji_c {
     my (%valores) = @_;
     my %valOrd;
@@ -47,7 +50,15 @@ sub ji_c {
     return $ji_c;
 }    ## -- end sub ji_c
 
-sub leeOut {
+#===  FUNCTION  ================================================================
+#         NAME: procOut
+#      PURPOSE: Leer desde el archivo de salida para obtener los valores de 
+#      			interés para el cálculo del Ji cuadrado. 
+#   PARAMETERS: Dirección del archivo en cuestión
+#      RETURNS: Lista de flotantes
+#       THROWS: no exceptions
+#===============================================================================
+sub procOut {
     my ($filename) = @_;
     open INFILE, $filename;
     my $linea;
