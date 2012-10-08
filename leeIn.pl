@@ -3,16 +3,16 @@
 #
 #         FILE: leeIn.pl
 #
-#        USAGE: ./leeIn.pl  
+#        USAGE: ./leeIn.pl
 #
-#  DESCRIPTION: 
+#  DESCRIPTION:
 #
 #      OPTIONS: ---
 # REQUIREMENTS: ---
 #         BUGS: ---
 #        NOTES: ---
 #       AUTHOR: Alexis Ibarra (ai), ar.ibarrasalas@gmail.com
-# ORGANIZATION: 
+# ORGANIZATION:
 #      VERSION: 1.0
 #      CREATED: 24/09/12 14:57:18
 #     REVISION: ---
@@ -20,28 +20,22 @@
 
 use strict;
 use warnings;
-
 use Tie::File;
 
-
-#Archivo que quieres editar
 my ($archivo) = @ARGV;
-print $archivo;
-#
-#
-##Definimos el array que vamos a usar
 my @contenido;
-#
-#
-##Empieza la magia
 tie @contenido, 'Tie::File', $archivo or die "No se logró hacer el tie: $!";
-#
-#
-##Cambiamos la línea 153
-## Recuerda que como el array tiene un elemento 0
+my $formato = "(.{8})" x 7;
+print $formato;
+if ($contenido[12] =~ s/$formato/$1$2+1/g){
+	print  $1;
+}
+
+#if ( $contenido[12] =~ /\s{2}\d\s\d*\s\d+(.{8})(.{8})(.{8})(.{8})(.{8})(.{8})/ ) {
+#	my $hola = $6 + 13;
+#    print "Tu número es: " . $hola . "\n";
+#}
 ## la línea 153 realmente es el elemento 152
-$contenido[11] = 'Nuevo contenido';
-#
-#
+#$contenido[12] = 'Nuevo contenido';
 ##Eso es todo...wow! ¡Magia!
 untie @contenido;
