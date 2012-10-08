@@ -1,0 +1,6 @@
+# Temporales de vim
+
+*.swp
+*.aux
+*.toc
+*.log
