@@ -1,3 +1,29 @@
-Proyecto con Gustavo Alcalá
+Proyecto de apoyo con Gustavo Alcalá[0]
 
-Acá va la descripción del proyecto
+El ajustador de potenciales permite de manera automática variar valores de un
+archivo IN para luego procesarlo usando Fresco[], estudiar el OUT que genera
+este último y calcular la funcion Xi Cuadrado[] para comenzar de nuevo una
+cantidad I de veces pedidas por el usuario. En cada ciclo de ejecución genera un
+reporte REP que contiene el campo C que se varió, al valor que tuvo en esa
+iteración y el valor calculado de Xi Cuadrado.
+
+Actualmente está en versión beta 1.0
+
+Beta 
+Versión 1:
+	El usuario indica el campo, número de iteraciones y el paso a incrementar en
+	cada ciclo. Se cicla la cantidad de iteraciones indicada y por cada ciclo se
+	genera un reporte.
+Version 2:
+	El usuario podrá variar tantos campos como desee eligiendo cada vez un C, I y
+	P distintos asi como establecer valores para distintos campos.
+
+[0] Estudiante de pregrado en licenciatura física desarrollando su tesis con
+título ''
+[1] "Fresco is a program developed by Ian Thompson over the period 1983 - 2006,
+to perform coupled-reaction channels calculations in nuclear physics. It uses
+Fortran 90 or Fortran 95 on Unix, Linux, Vax and Windows machines."
+http://www.fresco.org.uk/
+[2] Es una distribución de probabilidad continua con un parámetro que representa
+los grados de libertad de la variable aleatoria.
+http://es.wikipedia.org/wiki/Distribuci%C3%B3n_%CF%87%C2%B2
