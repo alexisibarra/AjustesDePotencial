@@ -4,3 +4,6 @@
 *.aux
 *.toc
 *.log
+*.rep
+*.out
+fort.*
